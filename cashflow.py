@@ -22,9 +22,6 @@ class CashFlow(object):
         """Add a single event"""
         self.generate_series(description, amount, frequency='D', start=date_of_activity, end=date_of_activity)
 
-    def add_loan(self, loan):
-        self.series = pd.concat([self.series, loan.series])
-
     def export_to_csv(self, dirpath, filename):
         """Export the data to a csv file
 
